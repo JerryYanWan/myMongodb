@@ -2,10 +2,4 @@
 This path contains the articles that are downloaded from reuter's website.
 The articles are stored in the .pkl mode.
 
-/home/ywanad/Documents/YanWan/GS/reuters/corpus/
-
-
-tagDistribution.csv contains the tags that are filtered by moon. Read in code
-is written in the reachTag.py
-
 reachDB.py contains the code to reach the mongodb database.
