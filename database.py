@@ -5,13 +5,9 @@ class database(object):
 
     def __init__(self):
         self.client = pymongo.MongoClient("mongodb://127.0.0.1", 27017)
-        #self.client.drop_database("GS_HKUST")
         self.db = self.client["GS_HKUST"]
         self.reuters = self.db["reuters"]
-        #self.reuters.ensure_index([("uid", pymongo.ASCENDING), ("unique", True), \
-        #         ("dropDups", True)])
         self.reuters.ensure_index("uid", unique = True)
-        #self.connection = pymongo.Connection()
     def insert(self, items):
         try:
             self.reuters.insert(items)
